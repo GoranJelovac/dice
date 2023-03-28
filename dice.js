@@ -1,14 +1,17 @@
-window.onload = function () { 
+// window.onload = function () { 
     
     
-  let dice1 = document.getElementById("dice-one");
-  let dice2 = document.getElementById("dice-two");
+  // let dice1 = document.getElementById("dice-one");
+  // let dice2 = document.getElementById("dice-two");
+
+  let dice1 = document.querySelector("#dice-one");
+  let dice2 = document.querySelector(".dice-two");
 
   const num1 = Math.floor(Math.random() *6 + 1);
   const num2 = Math.floor(Math.random() *6 + 1);
 
   dice1.src = `Images/${num1}.png`;
-  dice2.src = `Images/${num2}.png`;
+  dice2.setAttribute("src", `Images/${num2}.png`);
 
   let winnerText ="";
   if(num1>num2){
@@ -20,5 +23,7 @@ window.onload = function () {
   }
 
   document.getElementById("winner").innerHTML = winnerText;
+  
 
-}
+
+// }
